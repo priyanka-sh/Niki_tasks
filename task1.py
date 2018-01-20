@@ -1,12 +1,10 @@
+import sys
 def sortbylength(list1):
 	list1.sort(key=len)
 	print 'Sorted list is: ',list1
-n=int(raw_input('Enter number of elements in list: '))
-mainlist=[]
-for i in range(0,n):
-	word=raw_input('enter elements: ')
-	mainlist.append(word)
-
+print "Enter the list of strings, enter after each string, Ctrl+D when done entering"
+mainlist=sys.stdin.readlines()
+mainlist = [i[:-1] for i in mainlist]
 sortbylength(mainlist)
 
 	
